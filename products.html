@@ -1,0 +1,512 @@
+<html>
+<head>
+<title> Products</title>
+<style>
+#id1{
+background-color:orange;
+position:absolute;
+height:20%;
+width:100%;
+left:0%;
+top:0%;
+}
+#id2{
+position:absolute;
+left:20%;
+top:21%;
+}
+ul{
+list-style:none;
+}
+ul li{
+background-color:green;
+height:40px;
+width:120px;
+float:left;
+display:inline;
+}
+ a{
+display:block;
+color:white;
+text-align:center;
+padding:14px 16px;
+text-decoration:none;
+}
+#cr{
+    position: absolute;
+    height: 45%;
+    width: 100%;
+    top: 255%;
+    left:0%;
+    background-color: lightblue;
+}
+#n,#e,#p,#p1,#p2,#p3,#q1,#q2,#q3,#r1,#r2,#r3,#p4,#q4,#r4,#d,#q,#space,#spc,#tm,#prl,#pr1,#per1
+{background-color :transparent;border-color:blue;padding:3px;border-top:none;
+outline:none;border-left: none;border-right: none;}
+#tb{
+position: absolute;
+height: 222%;
+width: 70%;
+top:30%;
+left:2%;
+background-color: lightblue;
+}
+body{background-image: url("g13.jpg");}
+
+.pipc{
+position:absolute;
+height:30%;
+width:27%;
+left:73%;
+background-color: aqua;
+}
+#pipa{
+top:30%;
+width:24%;
+background-color:crimson;
+}
+#pipb{
+top:62%;
+width:24%; 
+}
+#pipc{
+top:94%;
+width:24%;
+}
+#pipd{
+top:126%;
+width:24%;
+}
+#pipe{
+top:158%;
+width:24%; 
+}
+#pipf{
+top:190%;
+width:24%;
+}
+#pipg{
+top:222%;
+width:24%;
+}
+</style>
+<script>
+function ncheck(){
+var nc,nv;
+nc=document.getElementById("n").value;
+nc=nc.trim();
+nv=/^[a-zA-Z ]+$/;
+
+if(!nc.match(nv) || nc.length==0){
+document.getElementById("ns").innerHTML="*** name Inncorrect ***";
+return 'no';
+}
+else{
+document.getElementById("ns").innerHTML="";
+return 'ok';
+}
+}
+
+function echeck(){
+var nc,nv;
+nc=document.getElementById("e").value;
+nc=nc.trim();
+nv=/^[0-9a-zA-Z._-]+\@[a-zA-Z]+\.[a-zA-Z.]{2,6}$/;
+
+if(!nc.match(nv) ){
+document.getElementById("es").innerHTML="*** email Inncorrect ***";
+return 'no';
+}
+else{
+document.getElementById("es").innerHTML="";
+return 'ok';
+}
+}
+
+function phcheck(){
+var nc,nv;
+nc=document.getElementById("p").value;
+nc=nc.trim();
+nv=/^[0-9]{10,10}$/;
+if(!nc.match(nv) ){
+document.getElementById("phs").innerHTML="*** phone  Inncorrect ***";
+return 'no';
+}
+else{
+document.getElementById("phs").innerHTML="";
+return 'ok';
+}
+}
+function timec()
+{
+    tm=document.getElementById("tm").value;   
+    if(tm=='t123')
+    {
+        document.getElementById("tma").innerHTML="you time will be from 12 PM to 3pm";
+        return 'ok';
+    }
+    else if(tm=='t36')
+    {
+        document.getElementById("tma").innerHTML="you time will be from 3 PM to 6pm";
+        return 'ok';
+    }
+    else if(tm=='t69')
+    {
+        document.getElementById("tma").innerHTML="you time will be from 6 PM to 9pm";
+        return 'ok';
+    }
+    else if(tm=='t912')
+    {
+        document.getElementById("tma").innerHTML="you time will be from 9 PM to 12pm";
+        return 'ok';
+    }
+    else if(tm=='t1230')
+    {
+        document.getElementById("tma").innerHTML="you time will be from 12 PM to 3Am";
+        return 'ok';
+    }
+    else
+    {
+        document.getElementById("tma").innerHTML="choose time first";
+        return 'no';
+    }
+
+
+
+}
+function prox()
+{
+x=document.getElementById("space").value;
+if(x=='public'){
+    document.getElementById("spc").value="5000";
+    return 'ok';
+}
+else if(x=='business'){
+    document.getElementById("spc").value="8000";
+    return 'ok';
+}
+else if(x=='private'){
+    document.getElementById("spc").value="10000";
+    return 'ok';
+}
+else{
+    document.getElementById("spc").value="choose first";
+    return 'no';
+}
+}
+function pro1(){
+var a,s,b,c;
+a=document.getElementById("pr1").value;
+if(a=='vodka'){
+document.getElementById("r1").value="2000";
+document.getElementById("i1").src="pdt1.jpg";
+}
+else if(a=='beer'){
+document.getElementById("r1").value="1000";
+document.getElementById("i1").src="pdt3.jpg";
+}
+else if(a=='whiskey'){
+document.getElementById("r1").value="3000";
+document.getElementById("i1").src="pdt4.jpg";
+}
+else{
+document.getElementById("r1").value=0;
+document.getElementById("i1").src="";
+}
+}
+function add(){
+var p1,r1,q1,i1;
+p1=document.getElementById("pr1").value;
+r1=document.getElementById("r1").value;
+q1=document.getElementById("q1").value;
+i1=document.getElementById("i1").src;
+ if(p1!='s1' && q1!=0)
+ {
+    var p4, p2, p3;
+    p4=document.getElementById("p4").value;
+    p2=document.getElementById("p2").value;
+    p3=document.getElementById("p3").value;
+	if(p2==0){
+	
+	document.getElementById("p2").value=p1;
+	document.getElementById("r2").value=r1;
+	document.getElementById("q2").value=q1;
+	document.getElementById("i2").src=i1;
+	}
+	else if(p3==0){
+	
+	document.getElementById("p3").value=p1;
+	document.getElementById("r3").value=r1;
+	document.getElementById("q3").value=q1;
+	document.getElementById("i3").src=i1;
+	}
+	else if(p4==0){
+	
+	document.getElementById("p4").value=p1;
+	document.getElementById("r4").value=r1;
+	document.getElementById("q4").value=q1;
+	document.getElementById("i4").src=i1;
+	}
+	else {
+	alert("cart is full");
+	}
+	
+	}
+	else {
+	alert("please select product and quantity");
+	}
+}
+function clear1(){
+				document.getElementById("p2").value=0;
+				document.getElementById("r2").value=0;
+				document.getElementById("q2").value=0;
+				document.getElementById("i2").src='';
+}
+function clear2(){
+				document.getElementById("p3").value=0;
+				document.getElementById("r3").value=0;
+				document.getElementById("q3").value=0;
+				document.getElementById("i3").src='';
+}
+function clear3(){
+				document.getElementById("p4").value=0;
+				document.getElementById("r4").value=0;
+				document.getElementById("q4").value=0;
+				document.getElementById("i4").src='';
+}
+
+function dt()
+{
+    if(document.getElementById("d").value!='')
+    {
+		var d=new Date();
+	
+	var sy=d.getFullYear();
+	var sm=d.getMonth()+1;
+	var sd=d.getDate();
+	
+	var sday=(sy-1)*365 + (sm-1)*30 + sd;
+	
+	var de=document.getElementById("d").value;
+		var dt=new Date(de);
+	
+	var ey=dt.getFullYear();
+	var em=dt.getMonth()+1;
+	var ed=dt.getDate();
+	
+	var eday=(ey-1)*365 + (em-1)*30 + ed;
+	
+	var diff=(eday-sday);
+	
+	if(diff>0 && diff<=30)
+	{
+ 	
+	document.getElementById("t").innerHTML="you're booking on    "+sd+":"+sm+":"+sy ;
+    document.getElementById("t").innerHTML+="<br>";
+	document.getElementById("t").innerHTML+="your booked date "+ed+":"+em+":"+ey ;
+    return 'ok';
+	}
+	else
+	{
+	document.getElementById("t").innerHTML= "choose b/w 30 days from now";
+    return 'no';	
+}
+    }
+    else
+	{
+	document.getElementById("t").innerHTML= "choose date";
+    return 'no';	
+}
+}
+function sub()
+{
+    if(ncheck()=="ok" && echeck()=="ok" && phcheck()=="ok" && dt()=='ok' && prox()=='ok' && timec()=='ok')
+    {
+	n=document.getElementById("n").value;
+	p=document.getElementById("p").value;
+	e=document.getElementById("e").value;
+	p2=document.getElementById("p2").value;
+	r2=Number(document.getElementById("r2").value);
+	q2=Number(document.getElementById("q2").value);
+
+	document.getElementById("t2").value="name "+n;
+	document.getElementById("t2").value+="\n email "+e;
+	document.getElementById("t2").value+="\n phone "+p;
+	document.getElementById("t2").value+="\n product"+p2;
+	document.getElementById("t2").value+="\n rate "+r2;
+	document.getElementById("t2").value+="\n quantity "+q2;
+    document.getElementById("t2").value+="\n";
+    var sum=q2*r2;
+	document.getElementById("t2").value+="\n amount to be paid="+sum;
+    document.getElementById("t2").value+="\n ";
+}
+	
+    else{
+        ncheck();echeck();phcheck();
+        dt();prox();timec();
+        alert("enter details carefully");
+
+        alert( ncheck()+""+echeck()+""+phcheck()+""+dt()+""+prox()+""+timec())
+    }
+	
+}
+</script>
+
+
+</head>
+<body>
+
+    <div id="id1"><img src="bar1.jpg" width="100%" height="100%"></imgsrc></div>
+    <div id="id2">                                
+    <ul>
+    <li><a href="index.html"> HOME</a></li>
+    <li><a href="contact.html" >CONTACT</a></li>
+    <li><a href="index1.html" > GALLERY</a></li>
+    <li><a href="products.html" > PRODUCTS</a></li>
+    <li><a href="about.html"> ABOUT</a></li>
+    </ul>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    
+    <div id="tb">
+
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Enter Name:-<input type="text" id="n" onblur="ncheck()">
+ <span id="ns" style="color:red;"></span><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Phone No:-  <input type="text" id="p" maxlength="10"onblur="phcheck()">
+<span id="phs" style="color:red;"></span><br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Email id:-  <input type="text" id="e" onblur="echeck()">
+        <span id="es" style="color:red;">
+        </span><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        NO of persons will be attending:&nbsp;&nbsp;&nbsp;&nbsp;<select id="per1" ><br>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="10">10</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        SELECT TYPE OF SPACE
+        <select id="space" onchange="prox()">
+            <option value="s1">select</option>
+            <option value="public">public</option>
+            <option value="business">business</option>
+            <option value="private">private</option>
+            </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        rate for your space:<input type="text" id="spc" readonly>
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+enter date of booking : <input type="date" id="d" onblur="dt()">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<span id="t" ></span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ Choose time:-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="tm" onchange="timec()">
+    <option value="s1">select</option>
+    <option value="t123">12 P.M.-3 P.M.</option>
+    <option value="t36">  3 P.M.-6 P.M. </option>
+    <option value="t69">  6 P.M.-9 P.M.</option>
+    <option value="t912"> 9 P.M.-12 A.M.</option>
+    <option value="t1230"> 12 P.M.-3 A.M.</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<span id="tma" rows="3" cols="15" ></span>
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Product:&nbsp;&nbsp;&nbsp;&nbsp;
+        <select id="pr1" onchange="pro1()">
+        <option value="s1">select</option>
+        <option value="vodka">vodka</option>
+        <option value="whiskey">whiskey</option>
+        <option value="beer">beer</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+        Rate for the drink:<input type="text" id="r1" readonly>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+
+        Quantity<select id="q1" >
+            <option value="0">select</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            </select>
+        
+        
+
+        
+
+        <button onclick="add()">Add To cart</button>
+        <table width="800px" cellspacing="5px">
+        <tr bgcolor="gray">
+        <th>PRODUCT</th>
+        <th>RATE</th>
+        <th>QUANTITY</th>
+        <th>IMAGE</th>
+        <th>CLEAR</th>
+        </tr>
+        <tr bgcolor="pink">
+        <th> <input type="text" id="p2" value="0"readonly></th>
+        <th> <input type="text" id="r2"  value="0"readonly></th>
+        <th> <input type="text" id="q2" value="0"readonly></th>
+        <th><img src="" id="i2"  width="50px" height="50px"></th>
+        <th><button onclick="clear1()">Clear</button></th>
+        </tr>
+        <tr bgcolor="pink">
+        <th> <input type="text" id="p3" value="0"readonly></th>
+        <th> <input type="text" id="r3"  value="0"readonly></th>
+        <th> <input type="text" id="q3" value="0"readonly></th>
+        <th><img src="" id="i3"  width="50px" height="50px"></th>
+        <th><button onclick="clear2()">Clear</button></th>
+        </tr>
+        <tr bgcolor="pink">
+        <th> <input type="text" id="p4" value="0"readonly></th>
+        <th> <input type="text" id="r4"  value="0"readonly></th>
+        <th> <input type="text" id="q4" value="0"readonly></th>
+        <th><img src="" id="i4"  width="50px" height="50px"></th>
+        <th><button onclick="clear3()">Clear</button></th>
+        </tr>
+        </table>
+
+        <button onclick="sub()">BILL</button>
+        <button onclick="window.print()">Print this page</button>
+        <br><br>
+
+        <textarea cols="80" rows="20" id="t2" readonly> </textarea>
+
+    </div>
+
+    <div id="cr"> 
+        <p style="font-size:160%;
+        text-align:center";font-family: fantasy;>
+        LOCATION & HOURS<br>
+        ROHINI BUILDING,<br>
+        Salt Lake City<br>
+        
+        <br>
+        <br>
+        Open Daily:12:00PM-3:00 AM<br>
+        CONTACT FOR BOOKING<br>
+    
+        ©PRABHAKAR KUMAR
+        ADIT
+        6PM
+    
+    
+    
+    </p>
+    </div>
+<div class="pipc" id="pipa"><p>SELECTED PRODUCTS WILL SHOW HERE</p><img src=" " width="100%" height="100%" id="i1"></div>
+<div class="pipc" id="pipb"><img src="g4.jpg" width="100%" height="100%"></div>
+<div class="pipc" id="pipc"><img src="g5.jpg" width="100%" height="100%"></div>
+<div class="pipc" id="pipd"><img src="g6.jpg" width="100%" height="100%"></div>
+<div class="pipc" id="pipe"><img src="g7.jpg" width="100%" height="100%"></div>
+<div class="pipc" id="pipf"><img src="g8.jpg" width="100%" height="100%"></div>
+<div class="pipc" id="pipg"><img src="g9.jpg" width="100%" height="100%"></div>
+</body>
+
+
+</html>
